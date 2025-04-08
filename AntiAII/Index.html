@@ -1,157 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anti AII - Historia Interactiva</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANTI AII - Historia Interactiva</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="story-container">
-        <h1 id="story-title">Anti AII</h1>
-        <div id="story-text"></div>
-        <div id="image-container"></div>
-        <div id="options-container"></div>
-    </div>
-    
-    <!-- Insertar el JSON directamente en lugar de cargarlo desde un archivo -->
-    <script>
-        const storyData = {
-            "title": "ANTI AII",
-            "data": {
-                "stitches": {
-                    "alParecerHasDomi": {
-                        "content": [
-                            "Al parecer, has dominado el arte de ignorar la realidad. Quizás deberías mantenerte alejado de cualquier causa que requiera esfuerzo mental. ¡Disfruta de tu mundo de fantasía mientras el resto de nosotros intenta salvarte de tu propio sofá!",
-                            {
-                                "divert": "AntiAIIInspirado"
-                            }
-                        ]
-                    },
-                    "quHarsParaCombat": {
-                        "content": [
-                            "¿Qué harás para combatir el consumo excesivo y el impacto ambiental, y evitar que el planeta se convierta en un basurero aún mayor?",
-                            {
-                                "option": "Me comprometeré a promover la sostenibilidad y reducir los desechos de manera activa, porque creo firmemente que la Tierra necesita un cambio profundo y urgente para garantizar un futuro mejor para todos.",
-                                "linkPath": "actuarsConEmpata"
-                            },
-                            {
-                                "option": "Prefiero ignorar los problemas ambientales mientras disfruto de mi vida, ya que considero que la responsabilidad colectiva está sobrevalorada y mi prioridad es mantener mi confort personal por encima de todo.",
-                                "linkPath": "optarsPorIgnorar"
-                            }
-                        ]
-                    },
-                    "actuarsConEmpata": {
-                        "content": [
-                            "Actuarás con empatía hacia el planeta y las futuras generaciones, promoviendo la sostenibilidad y reduciendo los desechos, porque comprendes que es crucial proteger el medio ambiente para todos.",
-                            {
-                                "option": "Sigamos hablando",
-                                "linkPath": "FInspiradoEnFahr"
-                            }
-                        ]
-                    },
-                    "optarsPorIgnorar": {
-                        "content": [
-                            "Optarás por ignorar los problemas ambientales y priorizar tu comodidad, porque la vaguería y la facilidad de mirar a otro lado te resultan más atractivas que asumir responsabilidades colectivas.",
-                            {
-                                "divert": "elConsumoInjusti"
-                            }
-                        ]
-                    },
-                    "antiAIIEsUnaRebe": {
-                        "content": [
-                            "Anti AII es una rebelión contra las mega-empresas de la industria de la IA y todo lo que está destruyendo el planeta y la humanidad. Recuerda, si vas a ponerte en contacto con nosotros por medio de este chat, es porque posiblemente eres parte de la resistencia. Para saber si eres parte del problema o de la solución tienes que hablar con nosotros mediante este chat:",
-                            {
-                                "image": "https://f4.bcbits.com/img/a0170496156_10.jpg"
-                            },
-                            {
-                                "option": "Acceder al chat",
-                                "linkPath": "quHarsParaCombat"
-                            }
-                        ]
-                    },
-                    "elConsumoInjusti": {
-                        "content": [
-                            "El consumo injustificado y el conformismo son las principales causas de la destrucción de nuestro planeta. Tu actitud es parte del problema.",
-                            {
-                                "divert": "alParecerHasDomi"
-                            }
-                        ]
-                    },
-                    "AntiAIIInspirado": {
-                        "content": [
-                            "Anti AII está inspirado en la lucha por un mundo más sostenible y justo. Si quieres ser parte de la solución, debes comenzar por cambiar tu perspectiva.",
-                            {
-                                "option": "Reiniciar",
-                                "linkPath": "antiAIIEsUnaRebe"
-                            }
-                        ]
-                    },
-                    "FInspiradoEnFahr": {
-                        "content": [
-                            "Fahrenheit 451 nos recuerda la importancia de preservar el conocimiento y luchar contra la ignorancia. Tu compromiso con la sostenibilidad es un paso en la dirección correcta.",
-                            {
-                                "option": "Reiniciar",
-                                "linkPath": "antiAIIEsUnaRebe"
-                            }
-                        ]
-                    }
-                }
-            }
-        };
-    </script>
-    <script>
-        // Función para navegar a un stitch específico
-        function navigateToStitch(stitchId) {
-            // Obtener el stitch actual
-            const currentStitch = storyData.data.stitches[stitchId];
-            
-            if (!currentStitch) {
-                console.error('No se encontró el stitch:', stitchId);
-                return;
-            }
-            
-            // Limpiar contenedores
-            const storyTextElement = document.getElementById('story-text');
-            const imageContainer = document.getElementById('image-container');
-            const optionsContainer = document.getElementById('options-container');
-            
-            storyTextElement.innerHTML = '';
-            imageContainer.innerHTML = '';
-            optionsContainer.innerHTML = '';
-            
-            // Procesar el contenido
-            currentStitch.content.forEach(item => {
-                if (typeof item === 'string') {
-                    // Si es texto, añadirlo al contenedor de texto
-                    const paragraph = document.createElement('p');
-                    paragraph.textContent = item;
-                    storyTextElement.appendChild(paragraph);
-                } else if (item.image) {
-                    // Si es una imagen, mostrarla
-                    const imgElement = document.createElement('img');
-                    imgElement.src = item.image;
-                    imageContainer.appendChild(imgElement);
-                } else if (item.option) {
-                    // Si es una opción, crear un botón
-                    const button = document.createElement('button');
-                    button.textContent = item.option;
-                    button.onclick = () => {
-                        navigateToStitch(item.linkPath);
-                    };
-                    optionsContainer.appendChild(button);
-                } else if (item.divert) {
-                    // Si es una redirección automática, navegar al siguiente stitch
-                    setTimeout(() => navigateToStitch(item.divert), 100);
-                }
-            });
-        }
+  <div id="game-container">
+    <h1 id="story-title"></h1>
+    <img id="story-image" src="" alt="" style="display: none;" />
+    <div id="story-content"></div>
+    <div id="story-options"></div>
+  </div>
 
-        // Iniciar la historia
-        window.onload = function() {
-            // Mostrar el primer nodo
-            navigateToStitch("antiAIIEsUnaRebe");
-        };
-    </script>
+  <script src="main.js"></script>
 </body>
 </html>
