@@ -1,0 +1,218 @@
+{
+    "title": "ANTI AII",
+    "author": "BY ROBOO",
+    "sections": [
+      {
+        "type": "menu",
+        "options": [
+          {
+            "text": "Anti AII es una rebelión contra las mega-empresas de la industria de la IA y todo lo que está destruyendo el planeta y la humanidad. Recuerda, si vas a ponerte en contacto con nosotros por medio de este chat, es porque posiblemente eres parte de la resistencia.",
+            "links": [
+              {
+                "text": "Accede al chat de Anti AII.",
+                "link": "AntiAIIInspirado"
+              },
+              {
+                "text": "Escucha la Banda sonora en Bandcamp",
+                "link": "https://roboomusic.bandcamp.com/album/anti-aii"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "AntiAIIInspirado",
+        "image": "https://f4.bcbits.com/img/a0170496156_16.jpg",
+        "content": [
+          {
+            "text": "1. Anti AII: Inspirado en la crítica social en \"Ready Player One\" de Ernest Cline",
+            "options": [
+              {
+                "text": "Me convertiré en el gurú del pensamiento crítico, educando a todos para que no caigan en la trampa de las megacorporaciones.",
+                "link": "felicidadesHasMo"
+              },
+              {
+                "text": "Seguiré disfrutando de mi programa favorito y picoteando, porque, honestamente, ¿quién tiene tiempo para problemas futuros?",
+                "link": "alParecerHasDomi1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "felicidadesHasMo",
+        "content": [
+          {
+            "text": "¡Felicidades! Has mostrado el cerebro y la actitud para desafiar la manipulación. Prepárate para educar al mundo y ser el héroe de la resistencia (o al menos el que más se ríe de los algoritmos). El primer paso hacia una vida llena de largas charlas sobre el significado de la libertad.",
+            "options": [
+              {
+                "text": "Sigamos hablando",
+                "link": "OmegasInspiradoE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "alParecerHasDomi1",
+        "content": [
+          {
+            "text": "Al parecer, has dominado el arte de ignorar la realidad. Quizás deberías mantenerte alejado de cualquier causa que requiera esfuerzo mental.  ¡Disfruta de tu mundo de fantasía mientras el resto de nosotros intenta salvarte de tu propio sofá!",
+            "options": [
+              {
+                "text": "END",
+                "link": "END"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "OmegasInspiradoE",
+        "image": "https://f4.bcbits.com/img/a2975374743_16.jpg",
+        "content": [
+          {
+            "text": "2. Omegas: Inspirado en la crítica social en \"Children of Men\" de P.D. James",
+            "options": [
+              {
+                "text": "Llevaré la antorcha de la igualdad y lucharé contra la ostentación como un guerrero de la justicia social. ¡Que comience la revolución del sentido común!",
+                "link": "excelenteEstsLis"
+              },
+              {
+                "text": "Defenderé a los Omegas con todas mis fuerzas, porque, honestamente, ¿quién no querría ser uno de ellos y olvidar las preocupaciones financieras?",
+                "link": "pareceQueTeHasRe"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "excelenteEstsLis",
+        "content": [
+          {
+            "text": "¡Excelente! Estás listo para desafiar la superficialidad con una buena dosis de idealismo y realidad. Prepárate para poner fin a las fiestas lujosas y a la hipocresía social, porque tu talento para ser un \"guerrero\" solo es superado por tu capacidad para evitar malas noticias.",
+            "options": [
+              {
+                "text": "Sigamos hablando",
+                "link": "PiggyInspiradoEn"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "pareceQueTeHasRe",
+        "content": [
+          {
+            "text": "Parece que te has rendido ante el brillo y el glamour de los Omegas. ¡Sigue disfrutando de las fiestas y deja que otros luchen por la equidad! Después de todo, la vida es demasiado corta para preocuparse por cosas como la justicia social.",
+            "options": [
+              {
+                "text": "END",
+                "link": "END"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "PiggyInspiradoEn",
+        "image": "https://f4.bcbits.com/img/a2421322992_16.jpg",
+        "content": [
+          {
+            "text": "3. Piggy: Inspirado en el colapso moral en \"Lord of the Flies\" de William Golding",
+            "options": [
+              {
+                "text": "Liderar con sabiduría y abogar por una profunda reflexión, sabiendo que la conversación y la comprensión pueden triunfar sobre la brutalidad.",
+                "link": "perfectoTuCompro"
+              },
+              {
+                "text": "Tomar partido por los cazadores y afirmar la dominancia, creyendo que solo a través de la fuerza se puede combatir el caos.",
+                "link": "pareceQueHasEleg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "perfectoTuCompro",
+        "content": [
+          {
+            "text": "¡Perfecto! Tu compromiso con el equilibrio y la reflexión es exactamente lo que necesitamos. Prepárate para debatir y desafiar la dominación de la brutalidad con tu mente aguda. A medida que el mundo se convierte en un drama épico, tu mayor contribución será mantener la cabeza fría y las palabras afiladas.",
+            "options": [
+              {
+                "text": "Sigamos hablando",
+                "link": "VampPheromoneIns"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "pareceQueHasEleg",
+        "content": [
+          {
+            "text": "Parece que has elegido el lado fácil de la fuerza. ¡Sigue apoyando a los cazadores mientras el resto de nosotros tratamos de reconstruir la civilización! Después de todo, la brutalidad es una solución simple para un mundo complicado.",
+            "options": [
+              {
+                "text": "END",
+                "link": "END"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "VampPheromoneIns",
+        "image": "https://f4.bcbits.com/img/a0983249582_10.jpg",
+        "content": [
+          {
+            "text": "4. Vamp Pheromone: Inspirado en los vampiros de \"Mundo Anillo\" de Larry Niven",
+            "options": [
+              {
+                "text": "elConsumoInjusti",
+                "link": "elConsumoInjusti"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "elConsumoInjusti",
+        "content": [
+          {
+            "text": "El consumo injustificado y su impacto en el planeta se revelan como una vorágine insaciable: tener por tener, consumir por el simple hecho de poder, sin verdadera necesidad. La sociedad, cegada por un vampirismo capitalista, se entrega a la acumulación desmedida, ignorando el imperativo de una empatía social que podría equilibrar los desequilibrios sociales y detener la devastación ambiental.",
+            "options": [
+              {
+                "text": "Me comprometeré a promover la sostenibilidad y reducir los desechos de manera activa, porque creo firmemente que la Tierra necesita un cambio profundo y urgente para garantizar un futuro mejor para todos.",
+                "link": "FInspiradoEnFahr"
+              },
+              {
+                "text": "Prefiero ignorar los problemas ambientales mientras disfruto de mi vida, ya que considero que la responsabilidad colectiva está sobrevalorada y mi prioridad es mantener mi confort personal por encima de todo.",
+                "link": "optarsPorIgnorar1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "FInspiradoEnFahr",
+        "image": "https://f4.bcbits.com/img/a1033888287_16.jpg",
+        "content": [
+          {
+            "text": "5. F451: Inspirado en \"Fahrenheit 451\" de Ray Bradbury",
+            "options": [
+              {
+                "text": "Soplaré las brasas y avivaré las ideas. No pienso rendirme al fuego de la ignorancia.",
+                "link": "unaDecisinArries"
+              },
+              {
+                "text": "Quizás el sistema no esté tan equivocado. Si todos están contentos y entretenidos, ¿por qué complicarlo? En la conformidad también hay paz.",
+                "link": "elegisteLaCalmaY"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
