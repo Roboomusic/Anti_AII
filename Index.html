@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ANTI AII - Historia Interactiva</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti A.I.I. - Videojuego Narrativo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="game-container">
-    <h1 id="story-title"></h1>
-    <img id="story-image" src="" alt="" style="display: none;" />
-    <div id="story-content"></div>
-    <div id="story-options"></div>
-  </div>
+    <!-- Efectos CRT mejorados -->
+    <div class="crt-noise"></div>
+    <div class="crt-scanlines"></div>
+    <div class="crt-flicker"></div>
+    <div class="crt-glitch"></div>
+    
+    <main class="app-container">
+        <section class="image-container">
+            <img id="story-image" src="" alt="Imagen de la historia" loading="lazy">
+        </section>
+        
+        <aside class="chat-container">
+            <article id="story-content"></article>
+            <div id="story-options" class="chat-options"></div>
+        </aside>
+    </main>
 
-  <script src="main.js"></script>
+    <!-- Elementos de audio -->
+    <audio id="typing-sound" preload="auto">
+        <source src="https://freesound.org/data/previews/256/256458_4772965-lq.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="click-sound" preload="auto">
+        <source src="https://freesound.org/data/previews/242/242501_3755870-lq.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="background-music" loop preload="auto">
+        <source src="music/07_AA_Dystopia Is Now.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="main.js"></script>
 </body>
 </html>
