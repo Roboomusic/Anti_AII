@@ -1,66 +1,137 @@
 <!DOCTYPE html>
-<html lang="en"> <meta name="description" content="Juego narrativo interactivo retrofuturista sobre la resistencia a la inteligencia artificial totalitaria." />
-
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <title>Anti A.I.I. - Videojuego Narrativo</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Share+Tech+Mono&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Efectos CRT -->
-    <div class="crt-overlay">
-      <div class="crt-scanlines"></div>
-      <div class="crt-flicker"></div>
-      <div class="crt-noise"></div>
-      <div class="crt-glow"></div>
-      <div class="crt-flashes"></div>
-    </div>
-
-    <div id="game-container" class="main-container">
-      <main class="main-panel">
-        <!-- Imagen a la izquierda -->
-        <div class="image-panel">
-          <div class="image-wrapper">
-            <img
-              id="scene-image"
-              src="https://f4.bcbits.com/img/a0170496156_10.jpg"
-              alt="Escena actual"
-            />
-          </div>
-        </div>
-
-        <!-- Contenedor de texto y opciones a la derecha -->
-        <div class="content-panel">
-          <div class="terminal-header">
-            <div class="terminal-title">ANTI A.I.I.</div>
-          </div>
-
-          <div id="story-text" class="story-text"></div>
-
-          <div id="options-container" class="options-container"></div>
-        </div>
-      </main>
-    </div>
-
-    <!-- Elementos de audio -->
-    <audio id="text-blip" preload="auto">
-      <source src="sounds/bleep.mp3" type="audio/mpeg" />
-    </audio>
-
-    <audio id="click-sound" preload="auto">
-      <source src="sounds/bleep.mp3" type="audio/mpeg" />
-    </audio>
-
-    <script src="game.js"></script>
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Anti A.I.I. - Videojuego Narrativo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* Estilos específicos para itch.io */
+    html.itch-io, body.itch-io {
+      overflow: auto !important;
+      height: auto !important;
+    }
     
-  </body>
+    body.itch-io .game-container {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    
+    body.itch-io .main-panel {
+      border: none !important;
+      box-shadow: none !important;
+    }
+    
+    body.itch-io #options-container button,
+    body.itch-io .option-btn {
+      pointer-events: auto !important;
+      cursor: pointer !important;
+      position: relative !important;
+      z-index: 10 !important;
+    }
+    
+    /* Estilos para diferentes tamaños de pantalla */
+    @media (orientation: landscape) {
+      body.itch-io .main-panel {
+        flex-direction: row !important;
+      }
+      
+      body.itch-io .image-panel {
+        width: 65% !important;
+        height: 100% !important;
+      }
+      
+      body.itch-io .content-panel {
+        width: 35% !important;
+        height: 100% !important;
+      }
+    }
+    
+    @media (orientation: portrait) {
+      body.itch-io .main-panel {
+        flex-direction: column !important;
+      }
+      
+      body.itch-io .image-panel {
+        width: 100% !important;
+        height: 40% !important;
+      }
+      
+      body.itch-io .content-panel {
+        width: 100% !important;
+        height: 60% !important;
+      }
+    }
+  </style>
+
+  <script>
+    // Detectar itch.io inmediatamente
+    (function() {
+      try {
+        if (window.self !== window.top) {
+          document.documentElement.classList.add("itch-io");
+          document.body.classList.add("itch-io");
+          console.log("Itch.io detectado - aplicando ajustes");
+        }
+      } catch (e) {
+        document.documentElement.classList.add("itch-io");
+        document.body.classList.add("itch-io");
+        console.log("Error de seguridad - asumiendo itch.io");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <!-- Efectos CRT -->
+  <div class="crt-overlay">
+    <div class="crt-scanlines"></div>
+    <div class="crt-flicker"></div>
+    <div class="crt-noise"></div>
+    <div class="crt-glow"></div>
+    <div class="crt-flashes"></div>
+  </div>
+
+  <div class="game-container">
+    <main class="main-panel">
+      <!-- Imagen a la izquierda -->
+      <div class="image-panel">
+        <div class="image-wrapper">
+          <img
+            id="scene-image"
+            src="https://f4.bcbits.com/img/a0170496156_10.jpg"
+            alt="Escena actual"
+          />
+        </div>
+      </div>
+
+      <!-- Contenedor de texto y opciones a la derecha -->
+      <div class="content-panel">
+        <div class="terminal-header">
+          <div class="terminal-title">ANTI A.I.I.</div>
+        </div>
+
+        <div id="story-text" class="story-text"></div>
+
+        <div id="options-container" class="options-container"></div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Elementos de audio -->
+  <audio id="text-blip" preload="auto">
+    <source src="sounds/bleep.mp3" type="audio/mpeg" />
+  </audio>
+
+  <audio id="click-sound" preload="auto">
+    <source src="sounds/bleep.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="itch-fix-final.js"></script>
+  <script src="game.js"></script>
+</body>
 </html>

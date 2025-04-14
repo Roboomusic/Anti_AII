@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --main-bg-color: #000000;
   --terminal-blue: #00b4d8;
@@ -13,32 +14,6 @@
   --option-hover-bg: rgba(0, 180, 216, 0.2);
   --border-color: rgba(0, 180, 216, 0.4);
   --text-old: #8a2a2a; /* Color granate para texto antiguo */
-}
-
-/* Definición correcta de las fuentes */
-@font-face {
-  font-family: 'Babylon Industrial';
-  src: url('fonts/BABIND.woff') format('woff'),
-       url('fonts/BABIND.TTF') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto-Thin.ttf') format('truetype');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
 }
 
 html, body {
@@ -57,59 +32,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-/* ==================== CONTENEDOR PRINCIPAL DEL JUEGO ==================== */
-#game-container {
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
-  max-height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  overflow: hidden;
-}
-
-/* Ajustes para cuando está en iframe (itch.io) */
-.in-iframe #game-container {
-  width: 100%;
-  height: 100%;
-}
-
-/* ==================== ESTILOS RESPONSIVOS ==================== */
-/* Para pantallas pequeñas (móviles) */
-@media screen and (max-width: 767px) {
-  body {
-    font-size: 14px;
-  }
-  
-  /* Ajusta otros elementos según necesites */
-  .button-container button {
-    margin: 0.5vh;
-    padding: 1vh 2vw;
-  }
-}
-
-/* Para pantallas medianas (tablets) */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-/* Para pantallas grandes */
-@media screen and (min-width: 1024px) {
-  body {
-    font-size: 18px;
-  }
-  
-  /* Limitar el ancho del contenido en pantallas muy grandes */
-  .text-container {
-    max-width: 80%;
-  }
 }
 
 /* ==================== EFECTOS CRT ==================== */

@@ -214,9 +214,6 @@ body::before {
 /* ==================== TÍTULO Y ELEMENTOS ==================== */
 .main-title {
   font-family: "Babylon Industrial", sans-serif;
-  src: url('fonts/BABIND.woff') format('woff'),
-  url('fonts/BABIND.TTF') format('truetype');
-  font-display: swap;
   font-size: 8rem;
   color: rgba(0, 180, 216, 0.9);
   text-shadow: 0 0 10px rgba(0, 180, 216, 0.7), 0 0 20px rgba(0, 180, 216, 0.5),
