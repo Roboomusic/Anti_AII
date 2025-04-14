@@ -1,0 +1,551 @@
+{
+  "title": "ANTI AII",
+  "data": {
+    "stitches": {
+      "apparentlyYouHav": {
+        "content": [
+          "Apparently, you have mastered the art of ignoring reality. Perhaps you should stay away from any cause that requires mental effort. Enjoy your fantasy world while the rest of us try to save you from your own couch!",
+          {
+            "divert": "AntiAIIInspiredB"
+          }
+        ]
+      },
+      "whatWillYouDoToF": {
+        "content": [
+          "What will you do to fight excessive consumption and environmental impact, and prevent the planet from becoming an even bigger landfill?",
+          {
+            "option": "I will commit to actively promoting sustainability and reducing waste, because I firmly believe that Earth needs a profound and urgent change to ensure a better future for everyone.",
+            "linkPath": "youWillActWithEm",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "I prefer to ignore environmental problems while enjoying my life, as I consider collective responsibility to be overrated and my priority is to maintain my personal comfort above all else.",
+            "linkPath": "youWillChooseToI",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "youWillActWithEm": {
+        "content": [
+          "You will act with empathy towards the planet and future generations, promoting sustainability and reducing waste, because you understand that it is crucial to protect the environment for everyone.",
+          {
+            "option": "Let's keep talking",
+            "linkPath": "FInspiredByFahre",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "youWillChooseToI": {
+        "content": [
+          "You will choose to ignore environmental problems and prioritize your comfort, because laziness and the ease of looking the other way are more attractive to you than taking on collective responsibilities.",
+          {
+            "divert": "unjustifiedConsu"
+          }
+        ]
+      },
+      "ifYouHaveCreated": {
+        "content": [
+          "If you have created any loop in the conversation, perhaps you should reconsider if you are part of the problem. Education and example are key to advancing as a society. We can all learn and change. If we don't, the consequences will affect us all. If you have overcome the conversation without creating loops, you are an example to follow. Thank you for your time! You are not alone, we continue to fight together for a better future. Don't forget to listen to the game's soundtrack, created by and for people like you. Thanks for playing!",
+          {
+            "divert": "antiAIIIsARebell"
+          }
+        ]
+      },
+      "antiAIIIsARebell": {
+        "content": [
+          "Anti AII is a rebellion against the mega-corporations of the AI industry and everything that is destroying the planet and humanity. Remember, if you are going to contact us through this chat, it's because you are possibly part of the resistance. To know if you are part of the problem or the solution, you have to talk to us through this chat:",
+          {
+            "image": "https://f4.bcbits.com/img/a0170496156_10.jpg"
+          },
+          {
+            "option": "Access the Anti AII chat.",
+            "linkPath": "AntiAIIInspiredB",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "Listen to the Soundtrack on Bandcamp",
+            "linkPath": "httpsroboomusicb",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "pageNum": 1
+          },
+          {
+            "pageLabel": "Menu"
+          }
+        ]
+      },
+      "AntiAIIInspiredB": {
+        "content": [
+          "1. Anti AII: Inspired by the social critique in \"Ready Player One\" by Ernest Cline",
+          {
+            "image": "https://f4.bcbits.com/img/a0170496156_16.jpg"
+          },
+          {
+            "divert": "inTheNearFutureT"
+          }
+        ]
+      },
+      "inTheNearFutureT": {
+        "content": [
+          "In the near future, the artificial intelligence (AI) industry becomes a new form of mass control, similar to a religion created by power-hungry mega-corporations. Through deception and spectacle, these corporations seek to suppress individual rights, culture, and science. Although this strategy seems modern, it is a repetition of historical tactics of domination. In response, an independent group called Anti AII (Artificial Intelligence Industry) emerges, with the aim of liberating humanity from the manipulative influence of these mega-corporations through authentic art, which enriches creators and observers without having any commercial value like art driven by capitalism.",
+          {
+            "divert": "whatWillYouDoToP"
+          }
+        ]
+      },
+      "whatWillYouDoToP": {
+        "content": [
+          "What will you do to protect your rights and maintain your individuality in an AI world that seems like a bad science fiction joke?",
+          {
+            "option": "I will become the guru of critical thinking, educating everyone so they don't fall into the trap of mega-corporations.",
+            "linkPath": "congratulationsY",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "I'll continue enjoying my favorite show and snacking, because, honestly, who has time for future problems?",
+            "linkPath": "apparentlyYouHav1",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "httpsroboomusicb": {
+        "content": [
+          "https://roboomusic.bandcamp.com/album/anti-aii"
+        ]
+      },
+      "congratulationsY": {
+        "content": [
+          "Congratulations! You have shown the brain and attitude to challenge manipulation. Get ready to educate the world and be the hero of the resistance (or at least the one who laughs most at the algorithms). The first step toward a life full of long talks about the meaning of freedom.",
+          {
+            "option": "Let's keep talking",
+            "linkPath": "OmegasInspiredBy",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "apparentlyYouHav1": {
+        "content": [
+          "Apparently, you have mastered the art of ignoring reality. Perhaps you should stay away from any cause that requires mental effort. Enjoy your fantasy world while the rest of us try to save you from your own couch!"
+        ]
+      },
+      "OmegasInspiredBy": {
+        "content": [
+          "2. Omegas: Inspired by the social critique in \"Children of Men\" by P.D. James",
+          {
+            "image": "https://f4.bcbits.com/img/a2975374743_16.jpg"
+          },
+          {
+            "divert": "inTheNearFutureA"
+          }
+        ]
+      },
+      "inTheNearFutureA": {
+        "content": [
+          "In the near future, Anti AII emerges to expose the drama of favoritism enjoyed by a wealthy minority in contemporary society. The ostentation of luxury and displays of wealth contrast drastically with the precarious lives of millions who struggle to survive. The Omegas are privileged young people who symbolize social inequalities exacerbated by the indifference and contempt of the elite towards the less fortunate.",
+          {
+            "divert": "whatWillYouDoToS"
+          }
+        ]
+      },
+      "whatWillYouDoToS": {
+        "content": [
+          "What will you do to stop the parade of wealth and superficiality that define the Omegas?",
+          {
+            "option": "I will carry the torch of equality and fight against ostentation like a warrior of social justice. Let the revolution of common sense begin!",
+            "linkPath": "excellentYoureRe",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "I will defend the Omegas with all my strength, because, honestly, who wouldn't want to be one of them and forget about financial worries?",
+            "linkPath": "itSeemsThatYouHa",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "excellentYoureRe": {
+        "content": [
+          "Excellent! You're ready to challenge superficiality with a good dose of idealism and reality. Get ready to put an end to luxurious parties and social hypocrisy, because your talent for being a \"warrior\" is only surpassed by your ability to avoid bad news.",
+          {
+            "option": "Let's keep talking",
+            "linkPath": "PiggyInspiredByT",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "itSeemsThatYouHa": {
+        "content": [
+          "It seems that you have surrendered to the shine and glamour of the Omegas. Keep enjoying the parties and let others fight for equity! After all, life is too short to worry about things like social justice."
+        ]
+      },
+      "PiggyInspiredByT": {
+        "content": [
+          "3. Piggy: Inspired by the moral collapse in \"Lord of the Flies\" by William Golding",
+          {
+            "image": "https://f4.bcbits.com/img/a2421322992_16.jpg"
+          },
+          {
+            "divert": "inADystopianSoci"
+          }
+        ]
+      },
+      "inADystopianSoci": {
+        "content": [
+          "In a dystopian society where empathy has disappeared, a brutal hierarchy emerges, dominated by hunters who impose their will through violence and fear. Meanwhile, thinkers—those who value reason and reflection—are forced into the shadows, powerless and ignored. This growing conflict threatens to tear society apart, revealing the tragic truth: that neither brute force nor passive thought alone can create a sustainable future.",
+          {
+            "divert": "whatWillYouDoToP1"
+          }
+        ]
+      },
+      "whatWillYouDoToP1": {
+        "content": [
+          "What will you do to prevent society from crumbling further under the weight of violence and indifference?",
+          {
+            "option": "Lead with wisdom and advocate for deep reflection, knowing that conversation and understanding can triumph over brutality.",
+            "linkPath": "perfectYourCommi",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "Take sides with the hunters and assert dominance, believing that only through strength can chaos be fought.",
+            "linkPath": "itSeemsYouHaveCh",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "perfectYourCommi": {
+        "content": [
+          "Perfect! Your commitment to balance and reflection is exactly what we need. Get ready to debate and challenge the domination of brutality with your sharp mind. As the world turns into an epic drama, your greatest contribution will be keeping a cool head and sharp words.",
+          {
+            "option": "Let's keep talking",
+            "linkPath": "VampPheromoneIns",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "itSeemsYouHaveCh": {
+        "content": [
+          "It seems you have chosen the easy side of the force. Keep supporting the hunters while the rest of us try to rebuild civilization! After all, brutality is a simple solution for a complicated world."
+        ]
+      },
+      "VampPheromoneIns": {
+        "content": [
+          "4. Vamp Pheromone: Inspired by the vampires of \"Ringworld\" by Larry Niven",
+          {
+            "image": "https://f4.bcbits.com/img/a0983249582_10.jpg"
+          },
+          {
+            "divert": "unjustifiedConsu"
+          }
+        ]
+      },
+      "unjustifiedConsu": {
+        "content": [
+          "Unjustified consumption and its impact on the planet are revealed as an insatiable vortex: having for the sake of having, consuming for the simple fact of being able to, without true need. Society, blinded by capitalist vampirism, surrenders to excessive accumulation, ignoring the imperative of social empathy that could balance social imbalances and stop environmental devastation.",
+          {
+            "divert": "whatWillYouDoToC"
+          }
+        ]
+      },
+      "whatWillYouDoToC": {
+        "content": [
+          "What will you do to combat excessive consumption and environmental impact, and prevent the planet from becoming an even bigger landfill?",
+          {
+            "option": "I will commit to actively promoting sustainability and reducing waste, because I firmly believe that Earth needs a profound and urgent change to ensure a better future for everyone.",
+            "linkPath": "FInspiredByFahre",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "I prefer to ignore environmental problems while enjoying my life, as I consider collective responsibility to be overrated and my priority is to maintain my personal comfort above all else.",
+            "linkPath": "youWillChooseToI1",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "pageNum": -1
+          }
+        ]
+      },
+      "FInspiredByFahre": {
+        "content": [
+          "5. F451: Inspired by \"Fahrenheit 451\" by Ray Bradbury",
+          {
+            "image": "https://f4.bcbits.com/img/a1033888287_16.jpg"
+          },
+          {
+            "divert": "inASocietyWhereK"
+          }
+        ]
+      },
+      "inASocietyWhereK": {
+        "content": [
+          "In a society where knowledge is gunpowder and the system prefers everything to burn before someone wakes up, superficial and empty entertainment is the fire that consumes knowledge. Dangerous culture, the one that invites thinking, has been relegated to ashes, and those who seek to learn are labeled as rebels. While everyone carries \"wisdom\" in their pocket, few dare to use it.",
+          {
+            "divert": "whatStanceWillYo"
+          }
+        ]
+      },
+      "whatStanceWillYo": {
+        "content": [
+          "What stance will you take on the burning of knowledge and what will you do in the face of the fire of ignorance?",
+          {
+            "option": "I will blow the embers and fan the ideas. I don't intend to surrender to the fire of ignorance.",
+            "linkPath": "aRiskyDecisionCh",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "Perhaps the system isn't so wrong. If everyone is happy and entertained, why complicate it? There is also peace in conformity.",
+            "linkPath": "youChoseCalmAndP",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "youWillChooseToI1": {
+        "content": [
+          "You will choose to ignore environmental problems and prioritize your comfort, because laziness and the ease of looking the other way are more attractive to you than taking on collective responsibilities."
+        ]
+      },
+      "aRiskyDecisionCh": {
+        "content": [
+          "A risky decision, choosing to fan the ideas instead of letting them turn to ashes. Blowing the fire instead of putting it out is the path of those looking for something more. But, of course, in this world of smoke, that could cost you dearly.",
+          {
+            "option": "Let's keep talking",
+            "linkPath": "DuneInspiredByDu",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "youChoseCalmAndP": {
+        "content": [
+          "You chose calm and peace in conformity. Keeping everyone calm, without so many questions, has its merit... although perhaps you're just telling yourself what you want to hear. Anyway, lighting flames doesn't seem to be your thing."
+        ]
+      },
+      "DuneInspiredByDu": {
+        "content": [
+          "6. Dune: Inspired by \"Dune\" by Frank Herbert",
+          {
+            "image": "https://f4.bcbits.com/img/a1361713220_10.jpg"
+          },
+          {
+            "divert": "inABleakFutureEa"
+          }
+        ]
+      },
+      "inABleakFutureEa": {
+        "content": [
+          "In a bleak future, Earth has been transformed into a dry and sterile wasteland, the result of excessive exploitation of its natural resources. After suffering various natural disasters in the form of destructive flash floods, inundations, hurricanes, and intense cold and heat waves, now, water, which was once abundant, has become the scarcest and most valuable asset, handled with an iron fist by ruthless merchants who control the last reserves of the vital liquid. Cities, now enclaves monopolized by these merchants, rise as fortresses where access to water is the greatest sign of power and wealth. Human greed has led to the drying up of rivers, the reduction of lakes to puddles, and the conversion of oceans into horizons of contaminated water. The exploitation has been so extensive that every drop of water has become a currency in a brutal economy. The lessons of sustainability and respect for the environment have been forgotten, giving way to a culture of scarcity and conflict. In this context, true wealth is no longer measured in precious metals or luxury goods, but in the amount of water one controls. The leaders of this era are the merchants who have built empires on the misery of the thirsty. Humanity is trapped in an endless cycle of exploitation, where water has become the main driver of power and conflict. The vision of a sustainable future vanishes in a panorama of desolation and inequality.",
+          {
+            "divert": "theFutureIsInYou"
+          }
+        ]
+      },
+      "theFutureIsInYou": {
+        "content": [
+          "The future is in your hands! What are you going to do now in the face of climate change, denialism, and the exploitation of resources under an extreme neoliberal system?",
+          {
+            "option": "I will rise up against the neoliberal system that exploits our natural resources, advocate for the transition to renewable energies, and fight for policies that curb carbon burning and pollution.",
+            "linkPath": "youWillFightForC",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "I cannot ignore that the current system has allowed the development and well-being of millions of people. It's easy to blame capitalism, but hasn't progress been achieved thanks to the exploitation of resources? Maybe not all is lost. Is destroying the system that has brought so many advances, albeit at an environmental cost, really the only solution?",
+            "linkPath": "youBelieveThatTh",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "youWillFightForC": {
+        "content": [
+          "You will fight for climate justice, promoting clean energy and sustainable policies to curb the crisis.",
+          {
+            "option": "Let's keep talking",
+            "linkPath": "DystopiaIsNowIns",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "youBelieveThatTh": {
+        "content": [
+          "You believe that the progress obtained through the neoliberal system justifies the environmental costs, questioning whether it is possible to change without losing what has been achieved."
+        ]
+      },
+      "DystopiaIsNowIns": {
+        "content": [
+          "7. Dystopia is Now: Inspired by \"1984\" by George Orwell",
+          {
+            "image": "https://f4.bcbits.com/img/a0740724630_16.jpg"
+          },
+          {
+            "divert": "inADarkFutureLie"
+          }
+        ]
+      },
+      "inADarkFutureLie": {
+        "content": [
+          "In a dark future, lies and manipulation rule. Ultra-right and neoliberal parties, in their quest for power, have built a system based on disinformation and denialism. Truth is shaped as a tool of control, while fake news spreads like a virus, drowning out criticism and perpetuating apathy. Climate change, ignored and denied, becomes the silent weapon of those who prefer immediate benefits to the survival of the planet. Meanwhile, social networks, invaded by endless advertising, have been monopolized by a handful of corporations that decide what is visible and what should remain in the shadows. Privacy is no more than a myth in a world where everything is tracked, recorded, and sold to the highest bidder. The most powerful companies no longer serve the public good; they have taken control of global discourse. Their strategy is not just to make money, but to keep the population distracted and divided. Between consumer filters and algorithms that prioritize empty entertainment, the struggle for truth and justice seems more distant than ever. In this era of hypocrisy, resistance is a revolutionary act. While populist speeches promise freedom, what they really offer is a mirage: control disguised as progress. Fundamental rights are eroding little by little, and propaganda is so omnipresent that many no longer distinguish reality from fiction. The fight is no longer just against a regime, but against a system designed to perpetuate ignorance and conformism.",
+          {
+            "divert": "youAreTheLastLin"
+          }
+        ]
+      },
+      "youAreTheLastLin": {
+        "content": [
+          "You are the last line of defense! How will you respond to the tyranny of disinformation, consumerism, and the invasion of privacy?",
+          {
+            "option": "I will question what surrounds me and seek the truth, even if that means confronting the system.",
+            "linkPath": "yourCommitmentTo",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "I will take refuge in my bubble of entertainment and consumption, ignoring what happens in the real world.",
+            "linkPath": "yourDecisionToIg",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "yourCommitmentTo": {
+        "content": [
+          "Your commitment to truth and transparency is an act of courage. Prepare for adversity, but remember that a spark can ignite a revolution.",
+          {
+            "option": "Let's keep talking",
+            "linkPath": "SolarisInspiredB",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "yourDecisionToIg": {
+        "content": [
+          "Your decision to ignore reality makes you part of the problem. While you enjoy the show, the system that controls you strengthens."
+        ]
+      },
+      "SolarisInspiredB": {
+        "content": [
+          "8. Solaris: Inspired by \"Solaris\" by Stanislaw Lem",
+          {
+            "image": "https://f4.bcbits.com/img/a3190207617_16.jpg"
+          },
+          {
+            "divert": "earthOnTheBrinkO"
+          }
+        ]
+      },
+      "earthOnTheBrinkO": {
+        "content": [
+          "Earth, on the brink of collapse, faces environmental tragedies. Ocean warming is alarming. Forest fires devastate large swathes of land. Air pollution reaches unsustainable levels. Cities struggle to breathe amid smog and emissions. The meat industry destroys forests to expand livestock. Deforestation contributes to the climate crisis. Fossil fuels continue to be the main source of energy. Groundwater is being contaminated by chemicals. Food poisoning is becoming increasingly common. Recycling is insufficient, and waste continues to accumulate. Plastic invades the environment and slowly kills ecosystems. Pollution affects both wildlife and humans. The planet seems to be bleeding out, while we search for answers.",
+          {
+            "divert": "whatWillYouDoToF1"
+          }
+        ]
+      },
+      "whatWillYouDoToF1": {
+        "content": [
+          "What will you do to face the environmental crisis?",
+          {
+            "option": "I will consume only what I need, without supporting companies that harm the planet. I will look for ecological and sustainable alternatives. I will remove from my life those who do not respect the environment!",
+            "linkPath": "yourCommitmentTo1",
+            "ifConditions": null,
+            "notIfConditions": null
+          },
+          {
+            "option": "While others worry, I enjoy life! The planet will fix itself, and technological advances will solve the rest. Problems are just disguised opportunities, I don't have time to waste!",
+            "linkPath": "youPreferToEnjoy",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "yourCommitmentTo1": {
+        "content": [
+          "Your commitment to responsible consumption is crucial; by avoiding support for those who damage the planet, you are part of the change that the world needs.",
+          {
+            "option": "Let's keep talking",
+            "linkPath": "ifYouHaveCreated1",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "youPreferToEnjoy": {
+        "content": [
+          "You prefer to enjoy the pleasures of the present while others fight for the future. Your lifestyle may be comfortable, but change is happening, and you're enjoying it while you can!"
+        ]
+      },
+      "ifYouHaveCreated1": {
+        "content": [
+          "If you have created any loop in the conversation, perhaps you should reconsider if you are part of the problem. Education and example are key  to advancing as a society. We can all learn and change. If we don't,  the consequences will affect us all. If you have overcome the  conversation without creating loops, you are an example to follow. Thank  you for your time! You are not alone, we continue to fight together for  a better future. Don't forget to listen to the game's soundtrack,  created by and for people like you. Thanks for playing!",
+          {
+            "option": "Credits",
+            "linkPath": "aNTIAIIGAMEByFri",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "aNTIAIIGAMEByFri": {
+        "content": [
+          "ANTI AII GAME by Frikisoft ",
+          {
+            "divert": "musicIllustratio"
+          }
+        ]
+      },
+      "musicIllustratio": {
+        "content": [
+          "Music, illustration, text and dev by Roboo",
+          {
+            "divert": "roboomusicThanks"
+          }
+        ]
+      },
+      "roboomusicThanks": {
+        "content": [
+          "Roboomusic \u003e Thanks for Playing!",
+          {
+            "option": "ANTI AII OST",
+            "linkPath": "blankStitch",
+            "ifConditions": null,
+            "notIfConditions": null
+          }
+        ]
+      },
+      "blankStitch": {
+        "content": [
+          ""
+        ]
+      }
+    },
+    "initial": "antiAIIIsARebell",
+    "optionMirroring": true,
+    "allowCheckpoints": true,
+    "editorData": {
+      "playPoint": "blankStitch",
+      "libraryVisible": true,
+      "authorName": "BY ROBOO",
+      "textSize": 2
+    }
+  },
+  "url_key": 240838
+}

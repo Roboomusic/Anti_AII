@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> <meta name="description" content="Juego narrativo interactivo retrofuturista sobre la resistencia a la inteligencia artificial totalitaria." />
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Anti A.I.I. - Videojuego Narrativo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Efectos CRT -->
+    <div class="crt-overlay">
+      <div class="crt-scanlines"></div>
+      <div class="crt-flicker"></div>
+      <div class="crt-noise"></div>
+      <div class="crt-glow"></div>
+      <div class="crt-flashes"></div>
+    </div>
+
+    <div id="game-container" class="main-container">
+      <main class="main-panel">
+        <!-- Imagen a la izquierda -->
+        <div class="image-panel">
+          <div class="image-wrapper">
+            <img
+              id="scene-image"
+              src="https://f4.bcbits.com/img/a0170496156_10.jpg"
+              alt="Escena actual"
+            />
+          </div>
+        </div>
+
+        <!-- Contenedor de texto y opciones a la derecha -->
+        <div class="content-panel">
+          <div class="terminal-header">
+            <div class="terminal-title">ANTI A.I.I.</div>
+          </div>
+
+          <div id="story-text" class="story-text"></div>
+
+          <div id="options-container" class="options-container"></div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Elementos de audio -->
+    <audio id="text-blip" preload="auto">
+      <source src="sounds/bleep.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio id="click-sound" preload="auto">
+      <source src="sounds/bleep.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="game.js"></script>
+
+    
+  </body>
+</html>

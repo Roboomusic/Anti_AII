@@ -1,361 +1,460 @@
-/* Base - Reset */
+/* ==================== RESET Y CONFIGURACIÓN BASE ==================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-bg-color: #000000;
+  --terminal-blue: #00b4d8;
+  --terminal-dark: #121212;
+  --terminal-header: #000a12;
+  --glow-color: rgba(0, 180, 216, 0.7);
+  --option-hover-bg: rgba(0, 180, 216, 0.2);
+  --border-color: rgba(0, 180, 216, 0.4);
+  --text-old: #8a2a2a; /* Color granate para texto antiguo */
 }
 
-/* Tipografía principal */
+/* Definición correcta de las fuentes */
+@font-face {
+  font-family: 'Babylon Industrial';
+  src: url('fonts/BABIND.woff') format('woff'),
+       url('fonts/BABIND.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 body {
-    background-color: #000;
-    font-family: 'Oswald', 'Roboto', sans-serif;
-    color: #f2f2f2;
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Oswald', sans-serif;
+  background-color: var(--main-bg-color);
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-/* Efectos CRT mejorados */
-.crt-noise {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('data:image/png;base64,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');
-    opacity: 0.15; /* Aumentado de 0.05 a 0.15 para que se note más */
-    z-index: 105;
-    pointer-events: none;
+/* ==================== CONTENEDOR PRINCIPAL DEL JUEGO ==================== */
+#game-container {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Ajustes para cuando está en iframe (itch.io) */
+.in-iframe #game-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==================== ESTILOS RESPONSIVOS ==================== */
+/* Para pantallas pequeñas (móviles) */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* Ajusta otros elementos según necesites */
+  .button-container button {
+    margin: 0.5vh;
+    padding: 1vh 2vw;
+  }
+}
+
+/* Para pantallas medianas (tablets) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Para pantallas grandes */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+  
+  /* Limitar el ancho del contenido en pantallas muy grandes */
+  .text-container {
+    max-width: 80%;
+  }
+}
+
+/* ==================== EFECTOS CRT ==================== */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
 }
 
 .crt-scanlines {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.3) 50%);
-    background-size: 100% 4px;
-    z-index: 106;
-    opacity: 0.3; /* Aumentado de 0.15 a 0.3 para que se note más */
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(0, 0, 0, 0.5) 50%
+  );
+  background-size: 100% 2px; /* Líneas más delgadas = más visibles */
+  opacity: 0.4; /* Mayor opacidad para que se vean mejor */
+  z-index: 101;
 }
 
 .crt-flicker {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0);
-    z-index: 107;
-    pointer-events: none;
-    animation: flicker 0.3s infinite alternate-reverse;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  opacity: 1;
+  z-index: 102;
+  animation: strong-flicker 0.15s infinite alternate;
 }
 
-/* Añadido: efecto de destello de monitor antiguo */
-.crt-glitch {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 108;
-    pointer-events: none;
-    animation: monitor-flash 8s infinite;
+.crt-noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/png;base64,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");
+  opacity: 0.3; /* Mayor opacidad */
+  z-index: 103;
 }
 
-@keyframes flicker {
-    0% { opacity: 0.02; }
-    5% { opacity: 0.04; }
-    10% { opacity: 0.02; }
-    15% { opacity: 0.06; }
-    20% { opacity: 0.04; }
-    25% { opacity: 0.06; }
-    30% { opacity: 0.03; }
-    35% { opacity: 0.05; }
-    40% { opacity: 0.03; }
-    45% { opacity: 0.04; }
-    50% { opacity: 0.05; }
-    55% { opacity: 0.04; }
-    60% { opacity: 0.03; }
-    65% { opacity: 0.03; }
-    70% { opacity: 0.06; }
-    75% { opacity: 0.04; }
-    80% { opacity: 0.03; }
-    85% { opacity: 0.05; }
-    90% { opacity: 0.04; }
-    95% { opacity: 0.03; }
-    100% { opacity: 0.04; }
+/* Destellos intensos */
+.crt-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(0, 180, 216, 0.3) 0%, rgba(0, 0, 0, 0) 60%);
+  z-index: 104;
+  animation: intense-glow 8s infinite alternate;
 }
 
-/* Nuevo keyframe para destellos de monitor */
-@keyframes monitor-flash {
-    0%, 95%, 98% { 
-        box-shadow: none;
-        background: transparent; 
-    }
-    96%, 99.5% { 
-        box-shadow: 0 0 100px rgba(142, 236, 245, 0.6) inset;
-        background: rgba(142, 236, 245, 0.04);
-    }
-    99.6%, 99.9% { 
-        box-shadow: 0 0 5px rgba(142, 236, 245, 0.6) inset;
-        background: rgba(142, 236, 245, 0.02);
-    }
+/* Destellos aleatorios */
+.crt-flashes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 105;
+  opacity: 0;
+  animation: random-flashes 10s infinite;
 }
 
-/* Contenedor principal con grid */
-.app-container {
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    gap: 2px;
-    height: 90vh; /* Ajustado para mantener consistencia */
-    width: 90vw;
-    max-width: 1200px;
-    background-color: #000000;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 180, 216, 0.3), 0 0 40px rgba(0, 180, 216, 0.1);
-    border: 1px solid rgba(0, 180, 216, 0.2);
-    z-index: 10;
+@keyframes strong-flicker {
+  0%, 95%, 100% { opacity: 0.05; }
+  96%, 99% { opacity: 0.2; }
 }
 
-/* Contenedor de imagen - ajustado para igualar altura */
-.image-container {
-    position: relative;
-    overflow: hidden;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Asegurar que ocupe toda la altura disponible */
+@keyframes intense-glow {
+  0%, 40% { opacity: 0.3; transform: scale(1); }
+  50%, 60% { opacity: 0.5; transform: scale(1.05); }
+  70%, 100% { opacity: 0.3; transform: scale(1); }
 }
 
-#story-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    opacity: 1;
-    transition: opacity 0.3s ease, filter 0.2s ease;
-    background-color: #000;
+@keyframes random-flashes {
+  0%, 96%, 100% { opacity: 0; background: transparent; }
+  97%, 97.5% { opacity: 0.3; background: rgba(0, 180, 216, 0.1); }
+  98%, 98.5% { opacity: 0; background: transparent; }
+  99%, 99.3% { opacity: 0.5; background: rgba(255, 255, 255, 0.1); }
 }
 
-/* Efecto de glitch para imágenes - mejorado */
-#story-image.glitch {
-    animation: image-glitch 0.2s forwards;
+/* ==================== CONTENEDOR PRINCIPAL PANTALLA COMPLETA ==================== */
+.game-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.main-panel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row; /* Horizontal */
+  box-shadow: 
+      0 0 30px rgba(0, 180, 216, 0.7),
+      0 0 50px rgba(0, 180, 216, 0.3),
+      inset 0 0 20px rgba(0, 180, 216, 0.5);
+  border: 2px solid rgba(0, 180, 216, 0.6);
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+}
+
+/* ==================== PANEL DE IMAGEN ==================== */
+.image-panel {
+  width: 65%; /* Imagen ocupa más espacio */
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 100%;
+  height: 100%;
+  background-image: var(--bg-image, none);
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px) brightness(0.5);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+#scene-image {
+  position: relative;
+  z-index: 1;
+  width: 100%; /* Modificado para llenar el contenedor */
+  height: 100%; /* Modificado para llenar el contenedor */
+  object-fit: contain; /* Mantiene la proporción sin recortar */
+  transition: all 0.5s ease;
+}
+
+#scene-image.glitch {
+  animation: image-glitch 0.2s forwards;
 }
 
 @keyframes image-glitch {
-    0% { filter: none; }
-    10% { filter: hue-rotate(90deg) brightness(1.5) contrast(1.2); }
-    20% { filter: hue-rotate(-90deg) brightness(0.8); }
-    30% { filter: invert(0.2) hue-rotate(-90deg); }
-    40% { filter: contrast(1.5) brightness(0.8); }
-    50% { filter: blur(1px) hue-rotate(45deg); }
-    60% { filter: sepia(0.5) hue-rotate(20deg); }
-    70% { filter: saturate(2) brightness(0.9); }
-    80% { filter: contrast(1.2) blur(0.5px); }
-    90% { filter: hue-rotate(-45deg) brightness(1.1); }
-    100% { filter: none; }
+  0% { filter: none; }
+  25% { filter: hue-rotate(90deg) brightness(1.5) contrast(1.2); }
+  50% { filter: invert(0.2) hue-rotate(-90deg); }
+  75% { filter: saturate(2) brightness(0.9); }
+  100% { filter: none; }
 }
 
-/* Contenedor del chat rectangular - ajustado para igualar altura */
-.chat-container {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-left: 2px solid #333;
-    position: relative;
-    overflow: hidden;
-    height: 100%; /* Asegurando que ocupe toda la altura */
+/* ==================== PANEL DE CONTENIDO ==================== */
+.content-panel {
+  width: 35%; /* Chat ocupa menos espacio - vertical */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--terminal-dark);
 }
 
-#story-content {
-    flex: 1;
-    padding: 1.5rem;
-    overflow-y: auto;
-    color: #e0e0e0;
-    background-color: rgba(20, 20, 20, 0.8);
-    position: relative;
-    text-shadow: 0 0 5px rgba(0, 180, 216, 0.5);
-    font-size: calc(0.85rem + 0.2vw);
-    line-height: 1.6;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 180, 216, 0.5) rgba(0, 0, 0, 0.3);
+.terminal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--terminal-header);
+  border-bottom: 1px solid var(--border-color);
 }
 
-#story-content::-webkit-scrollbar {
-    width: 8px;
+.terminal-title {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--terminal-blue);
+  text-shadow: 0 0 5px var(--glow-color);
+  font-size: 1.3rem; /* Más grande */
 }
 
-#story-content::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.3);
+/* ==================== ÁREA DE TEXTO ==================== */
+.story-text {
+  flex: 1;
+  padding: 18px;
+  overflow-y: auto;
+  font-size: 1.6rem; /* Texto más grande para smartphones */
+  line-height: 1.7;
+  color: #f0f0f0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--terminal-blue) var(--terminal-dark);
+  font-family: 'Share Tech Mono', monospace; /* Fuente monoespaciada para efecto hacker */
 }
 
-#story-content::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 180, 216, 0.5);
-    border-radius: 4px;
+.story-text::-webkit-scrollbar {
+  width: 4px;
 }
 
-/* Efecto de typewriter - mejorado para sonido */
-.typewriter {
-    position: relative;
-    display: inline-block;
+.story-text::-webkit-scrollbar-track {
+  background: var(--terminal-dark);
 }
 
-.typewriter.typing::after {
-    content: '|';
-    position: absolute;
-    right: -4px;
-    color: rgba(0, 180, 216, 0.8);
-    animation: cursor-blink 0.7s infinite;
+.story-text::-webkit-scrollbar-thumb {
+  background-color: var(--terminal-blue);
+  border-radius: 2px;
 }
 
-@keyframes cursor-blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+.story-text p {
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px rgba(0, 180, 216, 0.3);
 }
 
-/* Efecto de texto con sombra */
-.text-with-shadow {
-    margin-bottom: 1rem;
-    text-shadow: 0 0 5px rgba(0, 180, 216, 0.3);
-    position: relative;
+/* Texto antiguo (granate) */
+.story-text p.old-text {
+  color: var(--text-old);
+  text-shadow: 0 0 5px rgba(138, 42, 42, 0.3);
 }
 
-/* Divisor visual entre fragmentos de texto */
-.text-divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, rgba(0, 180, 216, 0.3), transparent);
-    margin: 1rem 0;
+/* ==================== OPCIONES ==================== */
+.options-container {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top: 1px solid var(--border-color);
 }
 
-/* Opciones de diálogo */
-.chat-options {
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.option-btn {
+  background-color: rgba(0, 20, 40, 0.8);
+  color: var(--terminal-blue);
+  border: 1px solid var(--border-color);
+  padding: 15px 18px;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem; /* Botones más grandes */
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transición más dinámica */
+  border-radius: 3px;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2px;
 }
 
-/* Estilos de botones */
-.dialogue-option {
-    display: block;
-    width: 100%;
-    padding: 0.7rem 1rem;
-    margin-bottom: 0.1rem;
-    background-color: rgba(0, 180, 216, 0.1);
-    color: #00b4d8;
-    border: 1px solid rgba(0, 180, 216, 0.3);
-    text-align: left;
-    cursor: pointer;
-    font-family: 'Oswald', 'Roboto', sans-serif;
-    font-size: calc(0.85rem + 0.2vw);
-    position: relative;
-    transition: all 0.2s ease;
-    text-shadow: 0 0 5px rgba(0, 180, 216, 0.5);
-    border-radius: 2px;
+.option-btn::before {
+  content: "• ";
+  color: var(--terminal-blue);
 }
 
-.dialogue-option::before {
-    content: '• ';
-    color: #00b4d8;
+.option-btn::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.6) 0%, rgba(0, 0, 0, 0) 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  transform: translate(-30%, -30%);
+  pointer-events: none;
 }
 
-.dialogue-option:hover {
-    color: #48cae4;
-    background-color: rgba(0, 180, 216, 0.15);
-    transform: translateX(5px);
-    box-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
-    border-color: rgba(0, 180, 216, 0.5);
+.option-btn:hover {
+  background-color: rgba(0, 50, 80, 0.8);
+  transform: translateX(8px);
+  box-shadow: 
+      0 0 15px rgba(0, 180, 216, 0.7),
+      inset 0 0 8px rgba(0, 180, 216, 0.5);
+  color: #ffffff;
 }
 
-.dialogue-option:active {
-    transform: translateX(5px) scale(0.98);
+.option-btn:hover::after {
+  opacity: 0.7;
 }
 
-/* Botón especial turquesa */
-.turquoise-btn {
-    background-color: rgba(0, 180, 216, 0.2);
-    border-color: rgba(0, 180, 216, 0.5);
+.option-btn.special {
+  background-color: rgba(0, 70, 100, 0.7);
+  border-color: rgba(0, 180, 216, 0.8);
+  color: #48cae4;
 }
 
-/* Media queries para responsive design */
-@media (max-width: 768px) {
-    .app-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        height: 100vh;
-    }
-
-    .image-container {
-        height: 40vh;
-    }
+/* Botón de activación de audio */
+.audio-activate-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 12px 20px;
+  background: rgba(0, 180, 216, 0.8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  box-shadow: 0 0 15px rgba(0, 180, 216, 0.5);
+  transition: all 0.3s ease;
 }
 
-@media (min-width: 1200px) {
-    .app-container {
-        max-width: 1000px;
-        max-height: 700px;
-    }
-    
-    .dialogue-option {
-        font-size: calc(0.9rem + 0.2vw);
-    }
-}
-/* Efectos de sonido y retroiluminación */
-.typewriter.typing::after {
-    content: '|';
-    position: absolute;
-    right: -4px;
-    color: rgba(0, 180, 216, 0.8);
-    animation: cursor-blink 0.7s infinite;
-    text-shadow: 0 0 5px rgba(0, 180, 216, 0.5);
+.audio-activate-btn:hover {
+  background: rgba(0, 200, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.7);
+  transform: translateY(-2px);
 }
 
-@keyframes cursor-blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* Efecto de glitch durante la escritura */
-.typewriter.glitch {
-    animation: text-glitch 0.1s forwards;
-}
-
-@keyframes text-glitch {
-    0% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(-2px, -2px); }
-    60% { transform: translate(2px, 2px); }
-    80% { transform: translate(2px, -2px); }
-    100% { transform: translate(0); }
-}
-
-/* Efecto de retroiluminación durante la escritura */
-.typewriter.typing {
-    box-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
-    transition: box-shadow 0.3s ease;
-}
-
-/* Ajustes finales de botones */
-.dialogue-option {
-    transition: all 0.2s ease;
-    border-radius: 2px;
-    text-shadow: 0 0 5px rgba(0, 180, 216, 0.5);
-}
-
-.dialogue-option:hover {
-    transform: translateX(5px);
-    box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
-}
-
-.dialogue-option:active {
-    transform: translateX(5px) scale(0.98);
+/* ==================== RESPONSIVE ==================== */
+@media (orientation: portrait) {
+  .main-panel {
+      flex-direction: column;
+  }
+  
+  .image-panel {
+      width: 100%;
+      height: 50%;
+      border-right: none;
+      border-bottom: 1px solid var(--border-color);
+  }
+  
+  .content-panel {
+      width: 100%;
+      height: 50%;
+  }
 }
